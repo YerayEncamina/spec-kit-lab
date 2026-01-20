@@ -113,6 +113,8 @@ For each feature, follow the complete Spec Kit workflow:
 - Show loading skeleton while fetching data
 ```
 
+> **📝 Review:** Check the generated specification in `specs/` folder. Verify it captures all dashboard requirements and user interactions.
+
 #### Step 3.1.2 - Plan
 
 **For React:**
@@ -133,17 +135,23 @@ For each feature, follow the complete Spec Kit workflow:
 /speckit.plan Use vanilla HTML, CSS, and JavaScript. Use Vite for build tooling. Use native fetch API for HTTP requests. Use CSS custom properties for theming. Create modular JavaScript with ES modules. Store API URL in environment variables. Create dashboard components with adventure list.
 ```
 
+> **📝 Review:** Verify the plan matches your chosen framework and includes component structure, API integration approach, and state management.
+
 #### Step 3.1.3 - Tasks
 
 ```
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover component creation, API hooks/services, loading states, and error handling.
+
 #### Step 3.1.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Check generated components for proper API integration, loading states, and user feedback.
 
 #### ✅ Checkpoint: Verify Adventure Dashboard
 
@@ -169,11 +177,15 @@ For each feature, follow the complete Spec Kit workflow:
 - Character selection for adventures
 ```
 
+> **📝 Review:** Check that the specification includes form validation rules and modifier calculation display.
+
 #### Step 3.2.2 - Plan
 
 ```
 /speckit.plan Continue with the existing tech stack. Create character form with attribute inputs. Implement modifier calculation display. Add dice roll integration for stat generation. Create character sheet component.
 ```
+
+> **📝 Review:** Verify the plan includes form validation, dice roll API integration, and character sheet layout.
 
 #### Step 3.2.3 - Tasks
 
@@ -181,11 +193,15 @@ For each feature, follow the complete Spec Kit workflow:
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover form components, validation, dice integration, and character display.
+
 #### Step 3.2.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Verify form validation, modifier calculations, and dice roll integration work correctly.
 
 #### ✅ Checkpoint: Verify Character Management
 
@@ -211,11 +227,15 @@ For each feature, follow the complete Spec Kit workflow:
 - Dice roll results display with animation
 ```
 
+> **📝 Review:** Check that the specification includes all UI components and interaction patterns.
+
 #### Step 3.3.2 - Plan
 
 ```
 /speckit.plan Continue with the existing tech stack. Create game screen with narrative display. Implement command input with history. Add character status sidebar. Create combat UI with turn indicator. Add dice roll animation component.
 ```
+
+> **📝 Review:** Verify the plan includes narrative scrolling, command history, and combat state management.
 
 #### Step 3.3.3 - Tasks
 
@@ -223,11 +243,15 @@ For each feature, follow the complete Spec Kit workflow:
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover narrative display, input handling, combat UI, and dice animations.
+
 #### Step 3.3.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Verify narrative scrolling, command processing, combat mode, and dice roll display.
 
 #### ✅ Checkpoint: Verify Game Interface
 
@@ -253,11 +277,15 @@ For each feature, follow the complete Spec Kit workflow:
 - Sort and filter options
 ```
 
+> **📝 Review:** Check that the specification covers all inventory interactions and display modes.
+
 #### Step 3.4.2 - Plan
 
 ```
 /speckit.plan Continue with the existing tech stack. Create inventory grid component. Implement item detail modal/tooltip. Add equipment slot visualization. Create equip/unequip functionality.
 ```
+
+> **📝 Review:** Verify the plan includes grid/list toggle, item interactions, and equipment slot mapping.
 
 #### Step 3.4.3 - Tasks
 
@@ -265,11 +293,15 @@ For each feature, follow the complete Spec Kit workflow:
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover inventory display, item details, drag-drop/buttons, and filtering.
+
 #### Step 3.4.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Verify item display, detail views, equip/unequip actions, and sort/filter functionality.
 
 #### ✅ Checkpoint: Verify Inventory UI
 
@@ -294,11 +326,15 @@ For each feature, follow the complete Spec Kit workflow:
 - Filter by quest status (active, completed, failed)
 ```
 
+> **📝 Review:** Check that the specification includes all quest states and progress tracking requirements.
+
 #### Step 3.5.2 - Plan
 
 ```
 /speckit.plan Continue with the existing tech stack. Create quest list component with filters. Implement quest detail view. Add progress indicators. Create completed quests section.
 ```
+
+> **📝 Review:** Verify the plan includes filter logic, progress visualization, and quest history handling.
 
 #### Step 3.5.3 - Tasks
 
@@ -306,11 +342,15 @@ For each feature, follow the complete Spec Kit workflow:
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover quest list, detail view, progress bars, and filtering.
+
 #### Step 3.5.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Verify quest list, details, progress indicators, and filters work correctly.
 
 #### ✅ Checkpoint: Verify Quest Log
 

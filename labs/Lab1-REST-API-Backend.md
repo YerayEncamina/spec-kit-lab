@@ -136,6 +136,8 @@ For each feature, follow the complete Spec Kit workflow:
 - Cryptographically secure random number generation
 ```
 
+> **📝 Review:** Check the generated specification in `specs/` folder. Verify it captures all dice notation requirements and edge cases.
+
 #### Step 4.1.2 - Plan
 
 **For TypeScript:**
@@ -150,17 +152,23 @@ For each feature, follow the complete Spec Kit workflow:
 /speckit.plan Use C# with ASP.NET Core 8 Web API. Use Entity Framework Core with PostgreSQL database. Use xUnit for unit testing. Follow Clean Architecture pattern. Create a DiceService with parser and roller. Implement regex-based expression parsing.
 ```
 
+> **📝 Review:** Check the generated plan document. Verify the architecture decisions, file structure, and dependencies match your chosen tech stack.
+
 #### Step 4.1.3 - Tasks
 
 ```
 /speckit.tasks
 ```
 
+> **📝 Review:** Review the task breakdown. Ensure tasks are atomic, properly ordered, and cover all specification requirements.
+
 #### Step 4.1.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Review all generated code files. Check that the implementation follows the plan, includes proper error handling, and has unit tests.
 
 #### ✅ Checkpoint: Verify Dice System
 
@@ -181,11 +189,15 @@ curl -X POST http://localhost:3000/api/dice/roll \
 /speckit.specify Build an adventure initialization system where users can start a new text adventure. Each adventure has a unique ID, creation timestamp, current scene, and game state. Users should be able to create, retrieve, update, and delete adventures.
 ```
 
+> **📝 Review:** Check the generated specification. Verify CRUD operations are defined and game state structure is clear.
+
 #### Step 4.2.2 - Plan
 
 ```
 /speckit.plan Continue with the existing tech stack. Create Adventure entity with relationships. Implement CRUD operations. Add scene management and game state persistence. Generate OpenAPI documentation for all endpoints.
 ```
+
+> **📝 Review:** Verify the plan includes database schema design, API endpoints, and OpenAPI documentation approach.
 
 #### Step 4.2.3 - Tasks
 
@@ -193,11 +205,15 @@ curl -X POST http://localhost:3000/api/dice/roll \
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover entity creation, repository, service, controller, and tests.
+
 #### Step 4.2.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Check generated code for proper REST conventions, error handling, and OpenAPI annotations.
 
 #### ✅ Checkpoint: Verify Adventure System
 
@@ -226,11 +242,15 @@ curl -X GET http://localhost:3000/api/adventures
 - Character belongs to an adventure
 ```
 
+> **📝 Review:** Check that the specification includes attribute validation rules and modifier calculation formula.
+
 #### Step 4.3.2 - Plan
 
 ```
 /speckit.plan Continue with the existing tech stack. Create Character entity linked to Adventure. Implement attribute system with automatic modifier calculation. Add snapshot/versioning system for character history. Create unit tests for modifier calculations.
 ```
+
+> **📝 Review:** Verify the plan includes proper entity relationships and versioning strategy.
 
 #### Step 4.3.3 - Tasks
 
@@ -238,11 +258,15 @@ curl -X GET http://localhost:3000/api/adventures
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks include database migrations and unit tests for modifier calculations.
+
 #### Step 4.3.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Verify attribute validation, modifier calculations, and character-adventure relationships.
 
 #### ✅ Checkpoint: Verify Character System
 
@@ -268,11 +292,15 @@ curl -X POST http://localhost:3000/api/adventures/{adventureId}/characters \
 - Item effects and modifiers
 ```
 
+> **📝 Review:** Check that the specification covers item stacking logic and equipment slot constraints.
+
 #### Step 4.4.2 - Plan
 
 ```
 /speckit.plan Continue with the existing tech stack. Create Item and Inventory entities. Implement equipment slot system. Create loot table with weighted random selection using dice system. Add item effect modifiers to character stats.
 ```
+
+> **📝 Review:** Verify the plan includes loot table integration with dice system and stat modifier calculations.
 
 #### Step 4.4.3 - Tasks
 
@@ -280,11 +308,15 @@ curl -X POST http://localhost:3000/api/adventures/{adventureId}/characters \
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover item CRUD, equip/unequip logic, and loot table seeding.
+
 #### Step 4.4.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Verify slot validation, stacking logic, and stat modifier application.
 
 #### ✅ Checkpoint: Verify Inventory System
 
@@ -316,11 +348,15 @@ curl -X POST http://localhost:3000/api/characters/{characterId}/equip \
 - Damage calculation with weapon dice
 ```
 
+> **📝 Review:** Verify the specification includes AI behavior definitions and combat formula details.
+
 #### Step 4.5.2 - Plan
 
 ```
 /speckit.plan Continue with the existing tech stack. Create NPC/Enemy entities with AI state machine. Implement initiative system using dice service. Create combat resolver with attack rolls and damage calculation. Add unit tests for combat scenarios.
 ```
+
+> **📝 Review:** Check the plan includes state machine design and dice service integration.
 
 #### Step 4.5.3 - Tasks
 
@@ -328,11 +364,15 @@ curl -X POST http://localhost:3000/api/characters/{characterId}/equip \
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover enemy creation, AI logic, and combat resolution tests.
+
 #### Step 4.5.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Verify initiative ordering, attack/damage calculations, and AI state transitions.
 
 #### ✅ Checkpoint: Verify Combat System
 
@@ -364,11 +404,15 @@ curl -X POST http://localhost:3000/api/adventures/{adventureId}/combat/turn \
 - Quest dependencies (prerequisite quests)
 ```
 
+> **📝 Review:** Check that the specification defines stage transitions, conditions, and reward structures.
+
 #### Step 4.6.2 - Plan
 
 ```
 /speckit.plan Continue with the existing tech stack. Create Quest and QuestStage entities. Implement progress tracking system. Add condition evaluation for success/failure. Integrate with inventory for rewards. Create quest dependency graph.
 ```
+
+> **📝 Review:** Verify the plan includes dependency graph handling and reward distribution logic.
 
 #### Step 4.6.3 - Tasks
 
@@ -376,11 +420,15 @@ curl -X POST http://localhost:3000/api/adventures/{adventureId}/combat/turn \
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover quest CRUD, stage progression, and reward integration.
+
 #### Step 4.6.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Verify quest dependencies, stage transitions, and reward distribution.
 
 #### ✅ Checkpoint: Verify Quest System
 

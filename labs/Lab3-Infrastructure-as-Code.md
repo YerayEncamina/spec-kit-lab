@@ -151,11 +151,15 @@ For each infrastructure component, follow the complete Spec Kit workflow:
 - Tags for environment, project name, and cost center
 ```
 
+> **📝 Review:** Check the generated specification. Verify network topology, NSG rules, and tagging requirements are defined.
+
 #### Step 4.1.2 - Plan
 
 ```
 /speckit.plan Use Terraform 1.5+ with Azure provider. Create a networking module with VNet, subnets, and NSGs. Use variable files for dev and prod environments. Store state in Azure Storage with state locking. Follow Terraform best practices for naming.
 ```
+
+> **📝 Review:** Verify the plan includes module structure, variable files, and state backend configuration.
 
 #### Step 4.1.3 - Tasks
 
@@ -163,11 +167,15 @@ For each infrastructure component, follow the complete Spec Kit workflow:
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover provider configuration, resource group, VNet, subnets, and NSGs.
+
 #### Step 4.1.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Check generated Terraform files for proper naming, tagging, and NSG rules.
 
 #### ✅ Checkpoint: Verify Core Infrastructure
 
@@ -196,11 +204,15 @@ az resource list --resource-group adventure-game-dev-rg --output table
 - Azure Defender recommendations compliance
 ```
 
+> **📝 Review:** Check that the specification includes access policy definitions and logging requirements.
+
 #### Step 4.2.2 - Plan
 
 ```
 /speckit.plan Continue with the existing Terraform setup. Create a key-vault module. Implement access policies using managed identities. Add diagnostic settings for logging. Use data sources to reference the networking module outputs.
 ```
+
+> **📝 Review:** Verify the plan includes managed identity integration and module dependencies.
 
 #### Step 4.2.3 - Tasks
 
@@ -208,11 +220,15 @@ az resource list --resource-group adventure-game-dev-rg --output table
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover Key Vault creation, access policies, and diagnostic settings.
+
 #### Step 4.2.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Check access policies, managed identity references, and diagnostic settings configuration.
 
 #### ✅ Checkpoint: Verify Security Infrastructure
 
@@ -241,11 +257,15 @@ az keyvault show --name adventure-kv-dev --resource-group adventure-game-dev-rg
 - Custom domain and SSL certificate (optional)
 ```
 
+> **📝 Review:** Check that the specification includes App Service settings, database configuration, and monitoring.
+
 #### Step 4.3.2 - Plan
 
 ```
 /speckit.plan Continue with the existing Terraform setup. Create app-service and database modules. Configure App Service with managed identity. Store connection string in Key Vault. Add Application Insights for monitoring. Use references to networking and key-vault modules.
 ```
+
+> **📝 Review:** Verify the plan includes module dependencies, Key Vault secret references, and App Insights integration.
 
 #### Step 4.3.3 - Tasks
 
@@ -253,11 +273,15 @@ az keyvault show --name adventure-kv-dev --resource-group adventure-game-dev-rg
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover App Service, PostgreSQL, Key Vault secrets, and Application Insights.
+
 #### Step 4.3.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Check App Service configuration, database settings, managed identity, and Key Vault references.
 
 #### ✅ Checkpoint: Verify Backend Infrastructure
 
@@ -287,11 +311,15 @@ az postgres flexible-server show --name adventure-db-dev --resource-group advent
 - Staging environment for preview deployments
 ```
 
+> **📝 Review:** Check that the specification includes environment configuration and staging setup.
+
 #### Step 4.4.2 - Plan
 
 ```
 /speckit.plan Continue with the existing Terraform setup. Create static-web-app module. Configure environment variables to point to the App Service URL. Set up staging environment. Use outputs from the backend module for API URL.
 ```
+
+> **📝 Review:** Verify the plan includes API URL configuration and module output references.
 
 #### Step 4.4.3 - Tasks
 
@@ -299,11 +327,15 @@ az postgres flexible-server show --name adventure-db-dev --resource-group advent
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover Static Web App, environment variables, and staging configuration.
+
 #### Step 4.4.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Check Static Web App configuration, API URL environment variable, and staging setup.
 
 #### ✅ Checkpoint: Verify Frontend Infrastructure
 
@@ -329,11 +361,15 @@ terraform output static_web_app_url
 - GitHub Actions secrets configuration guide
 ```
 
+> **📝 Review:** Check that the specification includes role definitions and secrets documentation.
+
 #### Step 4.5.2 - Plan
 
 ```
 /speckit.plan Continue with the existing Terraform setup. Create Service Principal with Contributor role scoped to resource group. Document required GitHub secrets. Generate deployment token for Static Web App.
 ```
+
+> **📝 Review:** Verify the plan includes role scope, secrets list, and deployment token generation.
 
 #### Step 4.5.3 - Tasks
 
@@ -341,11 +377,15 @@ terraform output static_web_app_url
 /speckit.tasks
 ```
 
+> **📝 Review:** Ensure tasks cover Service Principal, role assignments, and secrets documentation.
+
 #### Step 4.5.4 - Implement
 
 ```
 /speckit.implement
 ```
+
+> **📝 Review:** Check Service Principal configuration, role assignments, and generated documentation.
 
 #### ✅ Checkpoint: Verify CI/CD Infrastructure
 
