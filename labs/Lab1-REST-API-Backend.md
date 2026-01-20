@@ -172,6 +172,15 @@ For each feature, follow the complete Spec Kit workflow:
 
 #### ✅ Checkpoint: Verify Dice System
 
+> **⚠️ Before testing:** Make sure your server is running!
+
+```bash
+# Start the server first (in a separate terminal)
+npm run dev   # TypeScript
+# OR
+dotnet run    # C#
+```
+
 ```bash
 # Test dice roll
 curl -X POST http://localhost:3000/api/dice/roll \
@@ -241,6 +250,8 @@ git push origin main
 > **📝 Review:** Check generated code for proper REST conventions, error handling, and OpenAPI annotations.
 
 #### ✅ Checkpoint: Verify Adventure System
+
+> **⚠️ Ensure server is running** (see Feature 1 checkpoint for start commands)
 
 ```bash
 # Create adventure
@@ -318,8 +329,10 @@ git push origin main
 
 #### ✅ Checkpoint: Verify Character System
 
+> **⚠️ Ensure server is running** (see Feature 1 checkpoint for start commands)
+
 ```bash
-# Create character
+# Create character (replace {adventureId} with actual ID from previous step)
 curl -X POST http://localhost:3000/api/adventures/{adventureId}/characters \
   -H "Content-Type: application/json" \
   -d '{"name": "Aldric", "str": 16, "dex": 14, "int": 10, "con": 15, "cha": 12}'
@@ -391,8 +404,10 @@ git push origin main
 
 #### ✅ Checkpoint: Verify Inventory System
 
+> **⚠️ Ensure server is running** (see Feature 1 checkpoint for start commands)
+
 ```bash
-# Add item to inventory
+# Add item to inventory (replace {characterId} with actual ID)
 curl -X POST http://localhost:3000/api/characters/{characterId}/inventory \
   -H "Content-Type: application/json" \
   -d '{"itemId": "sword-01", "quantity": 1}'
@@ -470,8 +485,10 @@ git push origin main
 
 #### ✅ Checkpoint: Verify Combat System
 
+> **⚠️ Ensure server is running** (see Feature 1 checkpoint for start commands)
+
 ```bash
-# Start combat
+# Start combat (replace {adventureId} with actual ID)
 curl -X POST http://localhost:3000/api/adventures/{adventureId}/combat/start \
   -H "Content-Type: application/json" \
   -d '{"enemies": ["goblin-01", "goblin-02"]}'
@@ -549,11 +566,13 @@ git push origin main
 
 #### ✅ Checkpoint: Verify Quest System
 
+> **⚠️ Ensure server is running** (see Feature 1 checkpoint for start commands)
+
 ```bash
-# Get available quests
+# Get available quests (replace {adventureId} with actual ID)
 curl -X GET http://localhost:3000/api/adventures/{adventureId}/quests
 
-# Accept quest
+# Accept quest (replace {questId} with actual ID)
 curl -X POST http://localhost:3000/api/adventures/{adventureId}/quests/{questId}/accept
 ```
 

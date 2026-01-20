@@ -155,6 +155,20 @@ For each feature, follow the complete Spec Kit workflow:
 
 #### ✅ Checkpoint: Verify Adventure Dashboard
 
+> **⚠️ Before testing:** Make sure both servers are running!
+
+```bash
+# Terminal 1: Start the backend API (from Lab 1 project)
+cd ../adventure-api
+npm run dev   # or: dotnet run
+
+# Terminal 2: Start the frontend dev server
+cd ../adventure-frontend
+npm run dev
+```
+
+Open http://localhost:5173 in your browser and verify:
+
 - [ ] Adventures list loads from API
 - [ ] Can create new adventure
 - [ ] Can select adventure to play
@@ -230,6 +244,10 @@ git push origin main
 
 #### ✅ Checkpoint: Verify Character Management
 
+> **⚠️ Ensure both servers are running** (see Feature 1 checkpoint for start commands)
+
+Open http://localhost:5173 in your browser and verify:
+
 - [ ] Character creation form works
 - [ ] Attributes can be allocated
 - [ ] Modifiers display correctly
@@ -302,6 +320,10 @@ git push origin main
 > **📝 Review:** Verify narrative scrolling, command processing, combat mode, and dice roll display.
 
 #### ✅ Checkpoint: Verify Game Interface
+
+> **⚠️ Ensure both servers are running** (see Feature 1 checkpoint for start commands)
+
+Open http://localhost:5173 in your browser and verify:
 
 - [ ] Narrative text displays and scrolls
 - [ ] Commands can be entered
@@ -377,6 +399,10 @@ git push origin main
 
 #### ✅ Checkpoint: Verify Inventory UI
 
+> **⚠️ Ensure both servers are running** (see Feature 1 checkpoint for start commands)
+
+Open http://localhost:5173 in your browser and verify:
+
 - [ ] Items display in grid/list
 - [ ] Item details show on interaction
 - [ ] Equip/unequip works
@@ -449,6 +475,10 @@ git push origin main
 > **📝 Review:** Verify quest list, details, progress indicators, and filters work correctly.
 
 #### ✅ Checkpoint: Verify Quest Log
+
+> **⚠️ Ensure both servers are running** (see Feature 1 checkpoint for start commands)
+
+Open http://localhost:5173 in your browser and verify:
 
 - [ ] Quest list displays
 - [ ] Quest details show objectives
