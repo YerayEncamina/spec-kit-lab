@@ -21,7 +21,7 @@ In this lab, you will forge a **REST API** using **OpenAPI (Swagger) 3.0.1** spe
 Before starting this lab, ensure you have:
 
 - [ ] Git installed and configured
-- [ ] Node.js (v18+) or .NET SDK (8.0+) installed
+- [ ] Node.js (v18+) or .NET SDK (10.0+) installed
 - [ ] **Visual Studio Code** installed
 - [ ] **GitHub Copilot** extension installed and activated in VS Code
 - [ ] Python 3.8+ with `uv` package manager (for Spec Kit CLI)
@@ -149,7 +149,7 @@ For each feature, follow the complete Spec Kit workflow:
 **For C#:**
 
 ```
-/speckit.plan Use C# with ASP.NET Core 8 Web API. Use Entity Framework Core with PostgreSQL database. Use xUnit for unit testing. Follow Clean Architecture pattern. Create a DiceService with parser and roller. Implement regex-based expression parsing.
+/speckit.plan Use C# with ASP.NET Core 10 Web API. Use Entity Framework Core with PostgreSQL database. Use xUnit for unit testing. Follow Clean Architecture pattern. Create a DiceService with parser and roller. Implement regex-based expression parsing.
 ```
 
 > **📝 Review:** Check the generated plan document. Verify the architecture decisions, file structure, and dependencies match your chosen tech stack.
