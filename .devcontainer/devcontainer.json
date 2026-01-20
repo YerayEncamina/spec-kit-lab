@@ -1,6 +1,6 @@
 {
   "name": ".NET & React Development",
-  "image": "mcr.microsoft.com/devcontainers/dotnet:1-10.0-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/dotnet",
   
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
