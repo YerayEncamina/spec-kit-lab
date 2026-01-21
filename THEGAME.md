@@ -1,110 +1,107 @@
-# 🧙‍♂️ Un juego de aventuras en texto
+# 🧙‍♂️ A Text-Based Adventure Game
 
-La gesta que nos aguarda encierra **tres grandes desafíos**, dignos de bardos y crónicas futuras.
+The quest that awaits holds **three grand challenges**, worthy of bards and future chronicles.
 
-Aventureras y aventureros que aquí os congregáis bajo el mismo estandarte, habréis de dividiros en **dos compañías**.
+You may use **GitHub Copilot** throughout all challenges to aid you in your journey.
 
-Antes del **primer reto**, se lanzará una moneda para decidir qué compañía podrá invocar el poder de **GitHub Copilot** durante el desafío inicial.
-
-En el **segundo desafío**, el destino se invertirá:
-- Quien antes no tuvo ayuda, ahora la tendrá.
-- Quien la tuvo, deberá prescindir de ella.
-
-Para el **tercer y último desafío**, **ambas partes** podrán hacer uso de GitHub Copilot.
-
-Entre desafío y desafío, habrá tiempo para que los espíritus reposen y las mentes se preparen.
+Between each challenge, there will be time for spirits to rest and minds to prepare.
 
 ---
 
-## 🎲 Reglas
+## 🎲 Rules
 
 ---
 
-## 🏰 Primer Desafío  
-### La Biblioteca al Final del Mundo
+## 🏰 First Challenge
 
-Habéis de forjar un **API REST** valiéndose del grimorio conocido como **Swagger (OpenAPI)**, en su versión **3.0.1**.  
-Este servirá de **backend** para vuestra aventura.
+### The Library at the End of the World
 
-El hechizo podrá escribirse en cualquiera de los siguientes lenguajes de poder:
+You must forge a **REST API** using the grimoire known as **Swagger (OpenAPI)**, in its version **3.0.1**.  
+This will serve as the **backend** for your adventure.
+
+The spell may be written in any of the following languages of power:
+
 - **C#**
 - **TypeScript**
 
-Serán tenidos en alta estima aquellos equipos que muestren esmero en las siguientes virtudes:
+High regard will be given to those who demonstrate diligence in the following virtues:
 
-- Permitir disfrutar de una **aventura sencilla por texto**
-- Cuidar los **aspectos de seguridad**
-- Claridad en los **pergaminos** (documentación del API)
-- Observancia de las **buenas prácticas** del desarrollo de APIs
+- Enabling a **simple text-based adventure**
+- Attending to **security aspects**
+- Clarity in the **scrolls** (API documentation)
+- Observance of **best practices** in API development
 
 ---
 
-### 🔧 Funcionalidades mínimas
+### 🔧 Minimum Functionality
 
-- **Inicializar una aventura**
-- **Gestión de personajes**
-  - Creación / edición / obtención
-  - Atributos: FUE / DEX / INT / CON / CHA
-  - Modificadores calculados
-  - Snapshots y versionado
-- **Sistema de dados**
-  - Soporte para expresiones tipo `2d6`
-- **Combate básico por turnos**
-  - NPCs / enemigos
-  - Estados simples: agresivo / defensivo / huir
-  - Resolución de turnos usando el motor de dados
-- **Inventario**
-  - Ítems apilables o equipables
+- **Initialize an adventure**
+- **Character management**
+  - Creation / editing / retrieval
+  - Attributes: STR (Strength) / DEX (Dexterity) / INT (Intelligence) / CON (Constitution) / CHA (Charisma)
+    - These core attributes define a character's capabilities and influence various gameplay mechanics
+  - Calculated modifiers
+  - Snapshots and versioning
+- **Dice system**
+  - Support for expressions like `2d6`
+- **Basic turn-based combat**
+  - NPCs / enemies
+  - Simple states: aggressive / defensive / flee
+  - Turn resolution using the dice engine
+- **Inventory**
+  - Stackable or equippable items
   - Loot tables
-- **Misiones multi-etapa**
-  - Progreso
-  - Condiciones de éxito / fracaso
-  - Persistencia del estado del mundo
-- **Seguridad mínima**
-  - Autenticación básica (token o JWT)
-  - Control de permisos
-- **Tests y documentación**
-  - Pruebas unitarias para:
-    - Motor de dados
-    - Cálculo de modificadores
-    - Motor de escenas
-  - Documentación mínima de los recursos
+- **Multi-stage quests**
+  - Progress tracking
+  - Success / failure conditions
+  - World state persistence
+- **Tests and documentation**
+  - Unit tests for:
+    - Dice engine
+    - Modifier calculation
+    - Scene engine
+  - Minimum resource documentation
 
 ---
 
-## 🗣️ Segundo Desafío  
-### La Voz de Quien Narra
+## 🗣️ Second Challenge
 
-Una vez forjado y encendido el API REST, toca practicar las artes de su invocación.
+### The Voice of the Narrator
 
-Habéis de erigir un **frontend**, con la tecnología que vuestro saber dicte, que permita:
-- Llamar al API REST
-- Emprender una **aventura por texto**, como si de un pergamino interactivo se tratase
+Once the REST API has been forged and ignited, it's time to practice the arts of its invocation.
 
-No es necesario que sea complejo ni visualmente impactante.  
-Basta con que cumpla su cometido con nobleza.
+You must build a **frontend**, with the technology your knowledge dictates, that allows:
 
-Se valorará especialmente:
-- La atención a la **seguridad**
-- La claridad en los **pergaminos** (documentación del código)
+- Calling the REST API
+- Embarking on a **text-based adventure**, as if it were an interactive scroll
+
+It need not be complex nor visually impressive.  
+It suffices that it fulfills its purpose with nobility.
+
+Special consideration will be given to:
+
+- Attention to **security**
+- Clarity in the **scrolls** (code documentation)
 
 ---
 
-## ☁️ Tercer Desafío  
-### El Plano del Reino
+## ☁️ Third Challenge
 
-Habéis de invocar el arcano arte de la **Infraestructura como Código**, empleando el secreto conocido como **Terraform**.
+### The Plan of the Realm
 
-Vuestra labor será desplegar recursos en el reino de la nube de **Azure**, siguiendo los dictados de:
-- Módulos
-- Estados
-- Declaraciones
+You must invoke the arcane art of **Infrastructure as Code**, employing the secret known as **Terraform**.
 
-No ha de ser algo complejo ni visualmente impactante.  
-Basta con que cumpla su cometido con nobleza.
+Your task will be to deploy resources in the cloud realm of **Azure**, following the dictates of:
 
-Se valorarán especialmente los códices que demuestren dominio en:
+- Modules
+- States
+- Declarations
 
-- 🔐 Seguridad de los despliegues
-- 📜 Claridad en la documentación
-- 🛠️ Fidelidad a las buenas prácticas del gremio
+It need not be complex nor visually impressive.  
+It suffices that it fulfills its purpose with nobility.
+
+Special regard will be given to codices that demonstrate mastery in:
+
+- 🔐 Deployment security
+- 📜 Clear documentation
+- 🛠️ Fidelity to best practices of the craft

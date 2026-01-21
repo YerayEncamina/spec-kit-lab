@@ -18,7 +18,7 @@ This repository provides a hands-on environment for learning and experimenting w
 
 Whether you're using GitHub Codespaces or running the devcontainer locally, Spec Kit and all its dependencies are automatically configured when the environment starts. Simply open the container and start exploring!
 
-## Getting Started with the Devcontainer
+## Start the Lab by getting Started with the Devcontainer
 
 This project uses a development container (devcontainer) to provide a consistent development environment. You can use it locally with Docker or in the cloud with GitHub Codespaces.
 
@@ -38,11 +38,13 @@ Before you begin, fork this repository to your own GitHub account:
    - All subsequent steps should be performed on your forked repository
    - This allows you to make changes and push commits without affecting the original repository
 
-## Option 1: Using GitHub Codespaces (Recommended)
+### Step 2: Open the repository to start the lab
+
+#### Option 1: Using GitHub Codespaces (Recommended)
 
 GitHub Codespaces provides a cloud-based development environment with no local setup required.
 
-### Steps to Start with Codespaces
+##### Steps to Start with Codespaces
 
 1. **Navigate to your forked repository:**
    - Go to `https://github.com/YOUR-USERNAME/spec-kit-lab` (replace `YOUR-USERNAME` with your GitHub username)
@@ -62,7 +64,7 @@ GitHub Codespaces provides a cloud-based development environment with no local s
    - Your changes are automatically saved to the cloud
    - You can access your Codespace from any device
 
-### Benefits of Codespaces
+##### Benefits of Codespaces
 
 - ✅ No local Docker installation required
 - ✅ Consistent environment across all team members
@@ -70,15 +72,15 @@ GitHub Codespaces provides a cloud-based development environment with no local s
 - ✅ Free tier includes 60 hours/month for personal accounts
 - ✅ Automatic environment setup and configuration
 
-## Option 2: Using Local Devcontainer
+#### Option 2: Using Local Devcontainer
 
-### Prerequisites
+##### Prerequisites
 
 - [Docker](https://www.docker.com/get-started) installed and running
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) for VS Code
 
-### Starting the Devcontainer
+##### Starting the Devcontainer
 
 1. **Clone your forked repository:**
 
@@ -107,7 +109,7 @@ GitHub Codespaces provides a cloud-based development environment with no local s
    - Once the container is ready, you'll have a fully configured development environment
    - The container runs Ubuntu 24.04.3 LTS with pre-installed tools
 
-### Available Tools
+#### Available Tools
 
 The devcontainer includes the following command-line tools:
 
@@ -120,11 +122,28 @@ The devcontainer includes the following command-line tools:
 - Compression: `zip`, `unzip`, `tar`, `gzip`, `bzip2`, `xz`
 - Security: `gpg`
 
-### Troubleshooting
+#### Troubleshooting
 
 - **Container won't start:** Make sure Docker is running and you have sufficient resources allocated
 - **Port conflicts:** Check if any required ports are already in use on your host machine
 - **Permission issues:** Ensure your user has permission to run Docker commands
+
+### Step 3: Open THEGAME.md to Start the Lab
+
+Once your development environment is ready (either in Codespaces or local devcontainer):
+
+1. **Open the game file:**
+   - Navigate to [THEGAME.md](THEGAME.md) in the repository root
+   - Or use the VS Code file explorer to locate and open `THEGAME.md`
+
+2. **Follow the instructions:**
+   - THEGAME.md contains the interactive lab experience
+   - Follow the steps and challenges presented in the file
+   - Complete each task as you progress through the lab
+
+3. **Have fun learning!**
+   - The lab is designed to be engaging and educational
+   - Don't hesitate to experiment and explore
 
 ## Model Context Protocol (MCP) Configuration
 
