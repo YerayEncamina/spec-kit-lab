@@ -53,10 +53,7 @@ specify check
 Create a new Spec Kit project for the adventure game. This will be a **monorepo** that houses both the API (this lab) and the frontend (Lab 2):
 
 ```bash
-# Create project directory
-mkdir text-adventure && cd text-adventure
-
-# Initialize with GitHub Copilot
+# Initialize with GitHub Copilot at project root
 specify init . --ai copilot
 
 ```
@@ -72,7 +69,7 @@ This creates:
 > **📦 Monorepo Structure:** This project will contain both the API and frontend. The `specs/` folder at the root contains shared specifications, and the `packages/` folder contains the actual implementations.
 
 ```
-text-adventure/
+project-root/
 ├── specs/           # Shared specifications (OpenAPI, features)
 ├── memory/          # Project context
 ├── scripts/         # Automation scripts

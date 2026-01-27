@@ -38,8 +38,8 @@ Before starting this lab, ensure you have:
 You'll create the frontend within the same project from Lab 1, sharing the OpenAPI specification:
 
 ```bash
-# Navigate to your text-adventure project root (from Lab 1)
-cd text-adventure
+# Navigate to your project root
+# You should already be at the root where specs/ and packages/ exist
 
 # Create the frontend package directory
 mkdir -p packages/frontend
@@ -54,7 +54,7 @@ ls ../../openapi.json  # or openapi.yaml
 ### Project Structure After This Lab
 
 ```
-text-adventure/
+project-root/
 ├── specs/              # Shared specifications
 ├── memory/             # Project context
 ├── openapi.json        # API contract (from Lab 1)
