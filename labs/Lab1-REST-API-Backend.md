@@ -50,20 +50,40 @@ specify check
 
 ## Step 2: Initialize Your Project
 
-Create a new Spec Kit project for the adventure game API:
+Create a new Spec Kit project for the adventure game. This will be a **monorepo** that houses both the API (this lab) and the frontend (Lab 2):
 
 ```bash
+# Create project directory
+mkdir text-adventure && cd text-adventure
+
 # Initialize with GitHub Copilot
 specify init . --ai copilot
 
+# Create monorepo structure
+mkdir -p packages/api
+cd packages/api
 ```
 
 This creates:
 
-- `specs/` directory for feature specifications
+- `specs/` directory for feature specifications (at root level, shared)
 - `memory/` directory for project context
 - `scripts/` directory with automation scripts
+- `packages/api/` directory for the backend API code
 - Agent-specific configuration files
+
+> **📦 Monorepo Structure:** This project will contain both the API and frontend. The `specs/` folder at the root contains shared specifications, and the `packages/` folder contains the actual implementations.
+
+```
+text-adventure/
+├── specs/           # Shared specifications (OpenAPI, features)
+├── memory/          # Project context
+├── scripts/         # Automation scripts
+├── packages/
+│   ├── api/         # Backend API (this lab)
+│   └── frontend/    # Frontend app (Lab 2)
+└── openapi.yaml     # Generated OpenAPI spec (shared)
+```
 
 ---
 
@@ -684,17 +704,30 @@ gh pr merge --squash --delete-branch
 
 ---
 
-## Step 5: Generate OpenAPI Documentation
+## Step 5: Generate and Export OpenAPI Documentation
 
-After all features are implemented, ensure your OpenAPI specification is complete:
+After all features are implemented, generate and export the OpenAPI specification to the project root. This shared spec will be used by the frontend in Lab 2.
 
 ```bash
 # For TypeScript with tsoa
 npm run swagger
 
-# For C# - Swagger is auto-generated at runtime
-# Access at: http://localhost:5000/swagger
+# Copy the generated spec to the project root for frontend consumption
+cp ./dist/swagger.json ../../openapi.json
+# OR if using YAML
+cp ./dist/swagger.yaml ../../openapi.yaml
 ```
+
+```bash
+# For C# - Export from Swagger at runtime
+# First, start your server
+dotnet run
+
+# In another terminal, download the spec
+curl http://localhost:5000/swagger/v1/swagger.json -o ../../openapi.json
+```
+
+> **🔗 Shared API Contract:** The `openapi.json` at the project root serves as the contract between your API and frontend. Lab 2 will use this file to generate TypeScript types and API clients, ensuring type-safe communication between the two layers.
 
 ---
 
@@ -730,6 +763,36 @@ curl -X POST http://localhost:3000/api/dice/roll \
   -H "Content-Type: application/json" \
   -d '{"expression": "2d6+3"}'
 ```
+
+---
+
+## Step 7: Prepare for Lab 2 (Frontend)
+
+Before moving to Lab 2, ensure the OpenAPI spec is ready for the frontend:
+
+### Verify OpenAPI Export
+
+```bash
+# Navigate to project root
+cd ../..  # from packages/api
+
+# Verify the OpenAPI spec exists
+ls -la openapi.json  # or openapi.yaml
+
+# Validate the spec (optional)
+npx @apidevtools/swagger-cli validate openapi.json
+```
+
+### Document API Base URL
+
+Create a `.env.example` file at the project root for shared environment configuration:
+
+```bash
+# .env.example
+API_URL=http://localhost:3000/api
+```
+
+> **✅ Ready for Lab 2:** With the OpenAPI spec exported and the API running, you're ready to build the frontend in Lab 2. The frontend will import this spec to generate typed API clients.
 
 ---
 
